@@ -8,6 +8,7 @@ import InputWrapper from './InputWrapper';
 import 'dayjs/locale/ru';
 import dayjs from 'dayjs';
 import { validateEndTime, validateStartTime } from '@src/utils';
+import { FormControl } from '@mui/material';
 
 export default function FormTimePicker(props: TFormTimePicker) {
   const { label, disabledPast, minTime, onChange, name } = props;
@@ -36,6 +37,7 @@ export default function FormTimePicker(props: TFormTimePicker) {
             isError={!!fieldState.error}
             message={fieldState.error?.message}
           >
+            <FormControl fullWidth>
             <TimePicker
               {...field}
               inputRef={ref}
@@ -44,6 +46,7 @@ export default function FormTimePicker(props: TFormTimePicker) {
               disablePast={disabledPast}
               minTime={minTime}
             />
+            </FormControl>
           </InputWrapper>
         )}
       />

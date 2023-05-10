@@ -6,6 +6,7 @@ import { Controller, useFormContext } from 'react-hook-form';
 import InputWrapper from './InputWrapper';
 import dayjs from 'dayjs';
 import { TFormDatePicker } from '@src/types';
+import { FormControl } from '@mui/material';
 
 export default function FormDatePicker ({ onChange, name }: TFormDatePicker) {
 
@@ -30,12 +31,15 @@ export default function FormDatePicker ({ onChange, name }: TFormDatePicker) {
             isError={!!fieldState.error}
             message={fieldState.error?.message}
           >
-            <DatePicker
-              {...field}
-              inputRef={ref}
-              label='День'
-              disablePast
-              />
+            <FormControl fullWidth>
+              <DatePicker
+                {...field}
+                inputRef={ref}
+                label='День'
+                disablePast
+                />
+            </FormControl>
+
           </InputWrapper>
         )}
       />
