@@ -33,6 +33,7 @@ export default function FormRoom() {
       endTime: data.endTime?.format('HH-mm'),
     };
     console.log(JSON.stringify(formData));
+    reset();
   };
 
   return(
