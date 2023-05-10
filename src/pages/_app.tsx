@@ -7,7 +7,7 @@ import { ruRU } from '@mui/x-date-pickers/locales';
 const theme = createTheme(
   {
     palette: {
-      primary: { main: '#1976d2' },
+      primary: { main: '#0077ff' },
     },
   },
   ruRU,
